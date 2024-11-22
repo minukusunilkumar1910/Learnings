@@ -1,0 +1,64 @@
+body
+{
+   margin: 0%;
+   padding: 0%;
+   box-sizing: border-box;
+   width: 100vw;
+   height: 100vh;
+   overflow: hidden;
+   background-image: url(../assets/background.png);
+   background-position: center;
+   background-repeat: no-repeat;
+   
+}
+.logo
+{
+   height: 30vh;
+   display: flex;
+   align-items: center;
+}
+.container
+{
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   background-color: aqua;
+}
+.content
+{
+   display: flex;
+   align-items:flex-start;
+   justify-content: center;
+   flex-direction: column;
+    
+   color: aliceblue;
+    
+   height: 100%;
+   
+}
+.triangle
+{
+   width: 1rem;
+   align-items: center;
+   margin: 0.4rem;
+}
+.btn
+{
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   align-items: center;
+   background-color:transparent;
+   gap: 1rem;
+   padding: 1rem;
+   border-radius: 3px;
+   border: 1.5px solid white;
+   margin-left: 130px;
+   cursor: pointer;
+}
+a
+{
+   text-decoration: none;
+   color: aliceblue;
+   font-size: 1.3rem;
+}
