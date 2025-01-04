@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>coin-flip Game</title>
+</head>
+<body>
+   <h1>Coin-Flip</h1>
+     <button onclick="playGame('Head')">Head</button>
+     <button onclick="playGame('Tail')">Tail</button>
+     <button onclick="   
+ ResetScore()
+ function ResetScore()
+   {
+      score.Losses=0;
+      score.Wins =0;
+      console.log(`Wins :${score.Wins},Losses :${score.Losses}`);
+   }">Reset Score
+</button> 
+
+   <h2>Guess the outcome of the Coin</h2>
+   <script>
+
+     const score = JSON.parse(localStorage.getItem('score')) || {
+      wins: 0,
+      losses: 0
+    };
+
+     function playGame(guess)
+     {
+         
+         let random = Math.floor(Math.random()*2)+1;
+         let result =''
+         if(random === 1)
+         {
+            result ='Head';
+         }
+        else if(random === 2)
+        {
+          result = 'Tail';
+         }
+         console.log(guess === result?`You Are Correct It is ${result}`:`You Are Wrong It is ${result}`);
+         console.log('----------------');
+         if (guess === result) 
+         {
+            score.Wins++;
+         } else 
+         {
+            score.Losses++;
+         }
+         console.log(`Wins :${score.Wins},Losses :${score.Losses}`);
+         localStorage.setItem('score',JSON.stringify(score));
+      }
+       //let guess =prompt("Enter Head or Tail"); 
+      
+   </script>
+</body>
+</html>

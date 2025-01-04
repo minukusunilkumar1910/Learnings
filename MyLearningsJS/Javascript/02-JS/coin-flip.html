@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>coin-flip Game</title>
+</head>
+<body>
+   <h1>Coin-Flip</h1>
+
+   <h2>Guess the outcome of the Coin</h2>
+   <script>
+      let random = Math.floor(Math.random()*2)+1;
+      
+        let result =''
+        if(random === 1)
+        {
+           result ='Head';
+      }
+       else if(random === 2)
+       {
+          result = 'Tail';
+         }
+
+       let guess =prompt("Enter Head or Tail");
+
+       
+       console.log(guess === result?`You Are Correct It is ${result}`:`You Are Wrong It is ${result} `);
+ 
+       
+   </script>
+</body>
+</html>

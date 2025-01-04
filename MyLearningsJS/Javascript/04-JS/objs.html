@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> Objects</title>
+</head>
+<body>
+    <script>
+      const product = {
+         name:"sunil",
+         'roll-no':191,
+         studies:
+         {
+           year :2024,
+           clg:"svce"
+         },
+         read: function fun()
+         {
+             console.log("I am Reading");
+         },
+         '20':'age',
+         8:'sub'
+      }
+
+
+      console.log(product.studies.year)
+      console.log(product['roll-no'])
+      console.log(product['name']);
+      console.log(product['studies']['clg']);
+      product.read()
+      console.log(product['20']);
+      console.log(product['8']);
+
+
+      /* JSON BUILT IN OBJ*/
+     let data = JSON.stringify(product);
+     let newdata = JSON.parse(data)
+     console.log(data);
+     console.log(newdata);
+
+
+
+    </script>
+</body>
+</html>

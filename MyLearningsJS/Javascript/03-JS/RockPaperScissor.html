@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+
+
+ 
+
+<button onclick="pickByComputer();playGame('Paper')">Paper</button>
+<button onclick="pickByComputer();playGame('Scissor')">Scissor</button>
+<button onclick="pickByComputer();playGame('Rock')">Rock</button> 
+
+
+
+<script>
+    
+   let picking = '';
+   let  result ='';
+
+
+   function pickByComputer()
+   {
+      random =Math.floor(Math.random()*3)+1;
+      
+      if(random === 1)
+      {
+         picking ='Scissor';
+      }
+      else if(random === 2 )
+      { 
+         picking ='Paper';
+      }
+      else if(random === 3 )
+      { 
+         picking ='Rock';
+      }
+ }
+  
+ function playGame(playerMove)
+   {
+   if(playerMove === 'Rock')
+   {
+
+      if(picking == 'Scissor')
+      { 
+         result ='You Win'
+      }
+      else if(picking =='Rock')
+      {
+         result ='It\'s Tie'
+      }   
+      else if(picking =='Paper')
+      {
+         result ='You Lose'
+      }   
+   }
+   else if(playerMove === 'Paper')
+   {
+      if(picking === 'Scissor')
+      { 
+         result ='You Lose'
+      }
+      else if(picking ==='Rock')
+      {
+         result ='You Win'
+      }   
+      else if(picking ==='Paper')
+      {
+         result ='It\'s Tie'
+      }  
+   }
+
+   else
+   {
+      if(picking === 'Scissor')
+      { 
+      result ='It\'s Tie'
+      }
+      else if(picking ==='Rock')
+      {
+         result ='You Lose'
+      }   
+      else if(picking ==='Paper')
+      {
+         result ='You win'
+      }  
+   }
+      alert(`You Picked - ${playerMove} , The Computer Picked -'${picking}' \n  Result is: ${result}`)
+     
+   }
+
+/*
+   function rockbutton()
+   {
+   
+      if(picking == 'Scissor')
+      { 
+         result ='You Win'
+      }
+      else if(picking =='Rock')
+      {
+         result ='It\'s Tie'
+      }   
+       else if(picking =='Paper')
+      {
+         result ='You Lose'
+      }   
+   
+      console.log(`You Picked - 'Rock' , The Computer Picked -'${picking}' \n  Result is: ${result}`)
+     
+   }
+
+
+ 
+   function PaperButton()
+   {
+      if(picking === 'Scissor')
+      { 
+         result ='You Lose'
+      }
+      else if(picking ==='Rock')
+      {
+         result ='You Win'
+      }   
+      else if(picking ==='Paper')
+      {
+         result ='It\'s Tie'
+      }  
+      console.log(`You Picked - 'Paper' , The Computer Picked -'${picking}' \n  Result is: ${result}`)
+   }
+
+
+
+   function scissorButton()
+   {
+
+      if(picking === 'Scissor')
+      { 
+      result ='It\'s Tie'
+      }
+      else if(picking ==='Rock')
+      {
+         result ='You Lose'
+      }   
+      else if(picking ==='Paper')
+      {
+         result ='You win'
+      }  
+      
+      console.log(`You Picked - 'Scissor' , The Computer Picked -'${picking}' \n  Result is: ${result}`)
+}
+      */
+</script>
+
+
+</body>
+</html>

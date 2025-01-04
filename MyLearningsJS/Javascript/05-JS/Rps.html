@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>RockPaperScissor</title>
+</head>
+<body>
+      <a href="./DomProject.html">Home page</a>
+      <br>
+      <br>
+      <br>
+
+<button onclick="pickByComputer();playGame('Paper')">Paper</button>
+<button onclick="pickByComputer();playGame('Scissor')">Scissor</button>
+<button onclick="pickByComputer();playGame('Rock')">Rock</button> 
+
+<p class="para"></p>
+<button onclick="   
+ ResetScore()
+ function ResetScore()
+   {
+      score.Losses=0;
+      score.Wins =0;
+      score.Ties =0;
+   }">Reset Score
+</button> 
+
+
+<script>
+   const score = JSON.parse(localStorage.getItem('score'))
+
+      document.querySelector('.para')
+         .innerHTML=`Wins: ${score.Wins} ,Losses: ${score.Losses} ,Ties ${score.Ties}`
+                          
+
+
+   
+   
+ /*  console.log(JSON.parse(localStorage.getItem('score')));*/
+
+   let picking = '';
+   let  result ='';
+
+   function pickByComputer()
+   {
+      random =Math.floor(Math.random()*3)+1;
+      
+      if(random === 1)
+      {
+         picking ='Scissor';
+      }
+      else if(random === 2 )
+      { 
+         picking ='Paper';
+      }
+      else if(random === 3 )
+      { 
+         picking ='Rock';
+      }
+ }
+  
+ function playGame(playerMove)
+   {
+   if(playerMove === 'Rock')
+   {
+
+      if(picking == 'Scissor')
+      { 
+         result ='You Win'
+      }
+      else if(picking =='Rock')
+      {
+         result ='It\'s Tie'
+      }   
+      else if(picking =='Paper')
+      {
+         result ='You Lose'
+      }   
+   }
+   else if(playerMove === 'Paper')
+   {
+      if(picking === 'Scissor')
+      { 
+         result ='You Lose'
+      }
+      else if(picking ==='Rock')
+      {
+         result ='You Win'
+      }   
+      else if(picking ==='Paper')
+      {
+         result ='It\'s Tie'
+      }  
+   }
+
+   else
+   {
+      if(picking === 'Scissor')
+      { 
+      result ='It\'s Tie'
+      }
+      else if(picking ==='Rock')
+      {
+         result ='You Lose'
+      }   
+      else if(picking ==='Paper')
+      {
+         result ='You Win'
+      }  
+   }
+
+   if(result === 'You Win')
+   {
+      score.Wins += 1;
+   }
+   else if(result === 'You Lose')
+   {
+      score.Losses +=1;
+   }
+   else
+   {
+      score.Ties += 1;
+   }
+
+   localStorage.setItem('score',JSON.stringify(score))
+
+   updateScore()
+
+      alert(`You Picked - ${playerMove} , The Computer Picked -'${picking}' \n  Result is: ${result} \n---------------------------\nWins : ${score.Wins} , Losses :${score.Losses} ,Ties ${score.Ties}`)
+ 
+
+     function updateScore()
+     {
+          document.querySelector('.para')
+            .innerHTML=`Wins: ${score.Wins} ,Losses: ${score.Losses} ,Ties ${score.Ties}`
+     }
+   }
+</script>
+</body>
+</html>

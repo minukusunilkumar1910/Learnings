@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h2>YouTube Subscribe Button</h2>
+   <button class="btn" onclick="change()">Subscribe</button>
+
+   <h3>Rock Paper Scissior</h3>
+   <a href="./Rps.html">Click Here</a>
+
+   <h2>Amazon Shipping Calulator</h2>
+
+   <script>
+     let btn =document.querySelector('.btn')
+     function change()
+     {
+      if(btn.innerHTML === 'Subscribe')
+      {
+         btn.innerHTML = 'Subscribed'
+      }
+      else{
+         btn.innerHTML = 'Subscribe'
+      }
+     }
+   </script>
+</body>
+</html>

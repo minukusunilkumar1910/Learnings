@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <button onclick="
+
+   let random = Math.floor(Math.random()*3)+1;
+   let picking = '';
+   if(random === 1)
+   {
+       picking ='Scissor';
+   }
+   else if(random === 2 )
+   { 
+      picking ='Paper';
+   }
+   else if(random === 3 )
+   { 
+      picking ='Rock';
+   }
+  
+
+   let result ='';
+
+   if(picking == 'Scissor')
+   { 
+      result ='You Win'
+   }
+   else if(picking =='Rock')
+   {
+      result ='It\'s Tie'
+   }   
+    else if(picking =='Paper')
+   {
+      result ='You Lose'
+   }   
+
+
+   console.log(`You Picked - 'Rock' , The Computer Picked -'${picking}' \n  Result is: ${result}`)
+
+    ">Rock</button>
+   <button onclick="
+      random =Math.floor(Math.random()*3)+1;
+      
+      picking = '';
+   if(random === 1)
+   {
+       picking ='Scissor';
+   }
+   else if(random === 2 )
+   { 
+      picking ='Paper';
+   }
+   else if(random === 3 )
+   { 
+      picking ='Rock';
+   }
+
+   result ='';
+
+   if(picking === 'Scissor')
+   { 
+      result ='You Lose'
+   }
+   else if(picking ==='Rock')
+   {
+      result ='You Win'
+   }   
+    else if(picking ==='Paper')
+   {
+      result ='It\'s Tie'
+   }  
+
+    console.log(`You Picked - 'Paper' , The Computer Picked -'${picking}' \n  Result is: ${result}`)
+   ">Paper</button>
+   <button onclick="
+     random =Math.floor(Math.random()*3)+1;
+      
+      picking = '';
+   if(random === 1)
+   {
+       picking ='Scissor';
+   }
+   else if(random === 2 )
+   { 
+      picking ='Paper';
+   }
+   else if(random === 3 )
+   { 
+      picking ='Rock';
+   }
+
+   result ='';
+
+   if(picking === 'Scissor')
+   { 
+      result ='It\'s Tie'
+   }
+   else if(picking ==='Rock')
+   {
+      result ='You Lose'
+   }   
+    else if(picking ==='Paper')
+   {
+      result ='You win'
+   }  
+
+    console.log(`You Picked - 'Scissor' , The Computer Picked -'${picking}' \n  Result is: ${result}`)
+   ">Scissor</button>
+
+
+   <h2>Total Wins </h2>
+
+</body>
+</html>
